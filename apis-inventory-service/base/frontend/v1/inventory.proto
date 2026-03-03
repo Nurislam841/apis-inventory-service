@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package inventory.base.frontend.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/AskatNa/apis-gen-inventory-service/base/frontend/v1;inventorybase";
+
+message Product {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  float price = 4;
+  int32 stock = 5;
+  string category_id = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+  bool is_active = 9;
+}
+
+message Category {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp updated_at = 5;
+}
